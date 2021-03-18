@@ -1,0 +1,12 @@
+{
+  "name": "frontendmovil",
+  "displayName": "frontendmovil",
+  "expo": {
+    "name": "frontendmovil",
+    "slug": "frontendmovil",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
