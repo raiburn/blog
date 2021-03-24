@@ -64,9 +64,7 @@ app.get('/secure', (req, res) => {
           error: 'Token inválido'
         })
       } else {
-        res.send({
-          message: 'Bienvenido Onichan'
-        })
+        return true;
       }
     })
 })

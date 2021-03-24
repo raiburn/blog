@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import './Login.css';
 import Auth from '../../services/Auth';
-import  { Redirect }  from "react-router-dom";
-import isAutenticated from "../../services/IsAutenticated";
+import  { Redirect, useHistory}  from "react-router-dom";
+import isAuthenticated from "../../services/IsAuthenticated";
+
+
 
 const Login = () => {
-    let auth = isAutenticated();
+    let auth = isAuthenticated();
+    let history = useHistory();
     
     const [data, setData] = useState({
         username:"",
@@ -20,14 +23,26 @@ const Login = () => {
 
     const onSubmit = (e) =>{
         e.preventDefault();
-        auth =Auth(data);
-        console.log(auth);
-        if(auth) 
-            window.location.href = "http://localhost:3000/inicio";
-        
-        
-
+        Auth(data);
+        f1()
+        auth = isAuthenticated();
+        if(auth)
+            history.push("/inicio");
+            
     }
+
+    function resolveAfter2Seconds(x) {
+        return new Promise(resolve => {
+          setTimeout(() => {
+              window.location.reload();
+            resolve(x);
+          }, 1000);
+        });
+      }
+
+    async function f1() {
+        var x = await resolveAfter2Seconds(15);
+      }
 
     
     if(auth === false){

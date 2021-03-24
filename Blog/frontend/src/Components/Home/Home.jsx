@@ -1,10 +1,10 @@
 import React from 'react';
-import isAutenticated from "../../services/IsAutenticated";
+import isAuthenticated from "../../services/IsAuthenticated";
 import  { Redirect }  from "react-router-dom";
 
 
 const Home = () =>{
-    const auth = isAutenticated();
+    const auth = isAuthenticated();
     if(auth){
         return (
             <div className="app">

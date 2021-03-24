@@ -1,4 +1,4 @@
-const isAutenticated = () => {
+let isAuthenticated = () => {
     if(localStorage.getItem('token')) {
         return true;
       } else {
@@ -6,4 +6,4 @@ const isAutenticated = () => {
       }
 }
 
-export default isAutenticated;
+export default isAuthenticated;
