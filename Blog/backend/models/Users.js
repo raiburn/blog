@@ -1,4 +1,4 @@
-const {Schema, model} = require('mongoose');
+const {Schema, SchemaType, model} = require('mongoose');
 
 const usuarioSchema = new Schema({
     email:{

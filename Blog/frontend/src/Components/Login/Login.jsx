@@ -62,7 +62,7 @@ const Login = () => {
                              onChange={onChange} value={data.password}/>
                             <input type="submit" className="fadeIn fourth" value="Log In" />
                         </form>
-
+                        
                         <div id="formFooter">
                             <a className="underlineHover" href="http://localhost:3000/registrarse">Registrarse</a>
                             <br></br>

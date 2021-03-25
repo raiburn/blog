@@ -5,6 +5,7 @@ const CreateArgue = async (req, res) => {
     try{
       const body = req.body;
       const user = (jwt.decode(body.user));
+      console.log(user);
       const argue = await Argues.create({ message: body.message, created_at: body.created_at, users: user.id});
       return res.status(200).json({argue});
     } catch(error){

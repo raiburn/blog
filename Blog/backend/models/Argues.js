@@ -1,7 +1,8 @@
-const {Schema, model} = require('mongoose');
+const {Schema, model, Mongoose} = require('mongoose');
 
 const arguesSchema = new Schema({
     message:{
+        required: true,
         type: String,
         trim:true
     },
@@ -9,7 +10,8 @@ const arguesSchema = new Schema({
         type: Date,
         trim:true
     },
-    user:{
+    users:{
+        required: true,
         type: Schema.ObjectId,
         ref:'Users'
     }
