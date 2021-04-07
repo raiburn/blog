@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import NewArgue from "../Feed/NewArgue/NewArgue";
-import Post from "./Post/Post";
+import NewArgue from "../../Home/Feed/NewArgue/NewArgue";
+import Post from "../../Home/Feed/Post/Post";
 import axios from "axios";
-import "./Feed.css";
+import "./FeedUser.css";
 import FlipMove from "react-flip-move";
 
 function Feed() {
@@ -11,7 +11,8 @@ function Feed() {
   useEffect( () => {
     const fetchData = async () => {
       try{
-        const result = await axios.get(`${window.location.protocol}//${window.location.hostname}:8000/api/argues/`);
+        const token = localStorage.getItem('token');
+        const result = await axios.get(`${window.location.protocol}//${window.location.hostname}:8000/api/argues/${token}`);
         setData(result.data.argues);
       }
       catch(error) {
@@ -20,11 +21,12 @@ function Feed() {
     }
     fetchData();
   }, []);
+  console.log(data);
 
   return (
     <div className="feed">
       <div className="feed__header">
-        <h2>Home</h2>
+        <h2>Profile</h2>
       </div>
 
       <NewArgue/>

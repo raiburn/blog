@@ -54,7 +54,6 @@ const DeleteUser = async (req, res) => {
 const FindUser = async (req, res) => {
     try {
         const username = req.params.username;
-        //ModelObj.findById(IdValue).exec(callback);
         const users = await Users.findOne({'username':username}).exec();
         return res.status(200).json({users});
     } catch (error) {

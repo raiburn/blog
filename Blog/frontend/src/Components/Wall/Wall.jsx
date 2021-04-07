@@ -1,12 +1,12 @@
 import React from 'react';
 import isAuthenticated from "../../services/IsAuthenticated";
-import Feed from "./Feed/Feed";
+import Feed from "./Feed/FeedUser";
 
 import Sidebar from '../Sidebar/Sidebar';
 import  { Redirect }  from "react-router-dom";
 
 
-const Home = () =>{
+const Wall = () =>{
     const auth = isAuthenticated();
     if(auth){
         
@@ -23,4 +23,4 @@ const Home = () =>{
     }
 }
 
-export default Home;
+export default Wall;

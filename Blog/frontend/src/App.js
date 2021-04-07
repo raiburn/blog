@@ -4,6 +4,10 @@ import "./App.css";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Login/Register/Register";
 import NotFound from "./Components/NotFound/NotFound";
+import Wall from "./Components/Wall/Wall";
+import Search from "./Components/Search/Search";
+import Groups from "./Components/Groups/Groups";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,6 +26,12 @@ function App() {
         <Route exact path='/registrarse' component={Register}>
         </Route>
         <Route exact path ='/inicio' component={Home}>
+        </Route>
+        <Route exact path ='/perfil' component={Wall}>
+        </Route>
+        <Route exact path ='/buscar' component={Search}>
+        </Route>
+        <Route exact path ='/grupos' component={Groups}>
         </Route>
         <Route path='*' component={NotFound}>
         </Route>

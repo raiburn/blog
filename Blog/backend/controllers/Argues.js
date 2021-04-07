@@ -31,4 +31,14 @@ const DeleteArgue = async (req, res) => {
     }
 }
 
-module.exports = {CreateArgue, ArguesAll, DeleteArgue}
+const ArguesUser = async (req, res) => {
+    try {
+        const user = (jwt.decode(req.params.username));
+        const argues = await Argues.find({}).populate('users').where('users').equals(user.id).sort({created_at:'desc'}).exec();
+        return res.status(200).json({argues});
+    }catch (error){
+        console.log(error);
+    }
+}
+
+module.exports = {CreateArgue, ArguesAll, DeleteArgue, ArguesUser}
