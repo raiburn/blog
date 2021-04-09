@@ -13,7 +13,7 @@ const commentSchema = new Schema({
         type: Schema.ObjectId,
         ref:'Argues'
     },
-    user:{
+    users:{
         type: Schema.ObjectId,
         ref:'Users'
     }

@@ -20,8 +20,8 @@ function Feed() {
     }
     fetchData();
   }, []);
-
   return (
+    <div className="feedcontainer">
     <div className="feed">
       <div className="feed__header">
         <h2>Home</h2>
@@ -31,16 +31,17 @@ function Feed() {
       <FlipMove>
       {data.map((post) => (
           <Post
-            key={post.text}
+            key={post._id}
             email={post.users.username}
             username={post.users.email}
-            verified={post.verified}
+            verified={post._id}
             text={post.message}
-            avatar={post.avatar}
+            avatar={post.users._id}
             image={post.image}
           />
         ))}
       </FlipMove>
+    </div>
     </div>
   );
 }

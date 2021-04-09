@@ -12,7 +12,7 @@ function Feed() {
     const fetchData = async () => {
       try{
         const token = localStorage.getItem('token');
-        const result = await axios.get(`${window.location.protocol}//${window.location.hostname}:8000/api/argues/${token}`);
+        const result = await axios.get(`${window.location.protocol}//${window.location.hostname}:8000/api/argue/${token}`);
         setData(result.data.argues);
       }
       catch(error) {
@@ -21,28 +21,29 @@ function Feed() {
     }
     fetchData();
   }, []);
-  console.log(data);
 
   return (
-    <div className="feed">
-      <div className="feed__header">
-        <h2>Profile</h2>
-      </div>
+    <div className="feedcontainer">
+      <div className="feed">
+        <div className="feed__header">
+          <h2>Profile</h2>
+        </div>
 
-      <NewArgue/>
-      <FlipMove>
-      {data.map((post) => (
-          <Post
-            key={post.text}
-            email={post.users.username}
-            username={post.users.email}
-            verified={post.verified}
-            text={post.message}
-            avatar={post.avatar}
-            image={post.image}
-          />
-        ))}
-      </FlipMove>
+        <NewArgue/>
+        <FlipMove>
+        {data.map((post) => (
+            <Post
+              key={post._id}
+              email={post.users.username}
+              username={post.users.email}
+              verified={post._id}
+              text={post.message}
+              avatar={post.users._id}
+              image={post.image}
+            />
+          ))}
+        </FlipMove>
+      </div>
     </div>
   );
 }

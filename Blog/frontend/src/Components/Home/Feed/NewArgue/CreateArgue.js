@@ -2,7 +2,7 @@ import axios from "axios";
 
 const createArgue = async (Argue) => {
     let d = new Date();
-      d=(d.getFullYear() + "/" + (d.getMonth() +1) + "/" + d.getDate());
+      d=(d.getFullYear() + "/" + (d.getMonth() +1) + "/" + d.getDate()+":"+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());
       const token = localStorage.getItem('token');
       if(Argue !== ""){
         try{

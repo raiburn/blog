@@ -21,7 +21,7 @@ const Login = () => {
         })
     }
 
-    const onSubmit = (e) =>{
+    const onSubmit = (e) => {
         e.preventDefault();
         Auth(data);
         f1()

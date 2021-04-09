@@ -1,7 +1,15 @@
+
+.feedcontainer{
+  padding-left: 103px;
+  width: 100%;
+
+}
 .feed {
   flex: 0.4;
   border-right: 1px solid gray;
+  border-left: 1px solid gray;
   min-width: fit-content;
+  background-color: #fff;
 }
 
 

@@ -7,6 +7,7 @@ import NotFound from "./Components/NotFound/NotFound";
 import Wall from "./Components/Wall/Wall";
 import Search from "./Components/Search/Search";
 import Groups from "./Components/Groups/Groups";
+import Profiles from "./Components/Profiles/Profiles";
 
 import {
   BrowserRouter as Router,
@@ -27,7 +28,9 @@ function App() {
         </Route>
         <Route exact path ='/inicio' component={Home}>
         </Route>
-        <Route exact path ='/perfil' component={Wall}>
+        <Route path ='/perfil' component={Wall}>
+        </Route>
+        <Route path ='/perfiles' component={Profiles}>
         </Route>
         <Route exact path ='/buscar' component={Search}>
         </Route>

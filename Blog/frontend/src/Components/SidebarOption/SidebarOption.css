@@ -5,22 +5,29 @@
   }
   
   .sidebarOption:hover {
-    background-color: grey;
+    background-color: #1b4671;
     border-radius: 30px;
-    color: var(--twitter-color);
+    color: #fff;
     transition: color 100ms ease-out;
   }
-  
+
   .sidebarOption > .MuiSvgIcon-root {
-    padding: 20px;
+    padding-left: 235px;
+    position: absolute;
   }
   
   .sidebarOption > h2 {
     font-weight: 800;
     font-size: 20px;
     margin-right: 20px;
+    color: #1b4671;
   }
-  
+  .sidebarOption:hover > h2 {
+    color: #fff;
+  }
   .sidebarOption--active {
-    color: grey;
+    color: #1b4671;
+  }
+  .sidebarOption--active:hover {
+    color: #fff;
   }

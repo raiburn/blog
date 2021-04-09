@@ -1,6 +1,7 @@
 import React from 'react';
 import isAuthenticated from "../../services/IsAuthenticated";
 import Feed from "./Feed/Feed";
+import Adds from "../Adds/Adds";
 
 import Sidebar from '../Sidebar/Sidebar';
 import  { Redirect }  from "react-router-dom";
@@ -14,6 +15,7 @@ const Home = () =>{
                 <div className="app">
                     <Sidebar />
                     <Feed />
+                    <Adds />
                 </div>
         )
     }else{

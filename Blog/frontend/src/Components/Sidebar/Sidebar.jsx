@@ -32,7 +32,8 @@ async function f1() {
 
     return (
       <div className="sidebar">
-  
+        <div class="sidebarlogo"></div>
+        <br/>
         <SidebarOption active Icon={HomeIcon} text="Inicio" />
         <SidebarOption Icon={SearchIcon} text="Buscar" />
         <SidebarOption Icon={GroupIcon} text="Grupos" />
