@@ -1,6 +1,6 @@
 import React from 'react';
 import isAuthenticated from "../../services/IsAuthenticated";
-import Feed from "./Feed/FeedUser";
+import Feed from "./Feed/FeedProfile";
 import Adds from "../Adds/Adds";
 import Sidebar from '../Sidebar/Sidebar';
 import  { Redirect }  from "react-router-dom";

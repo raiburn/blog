@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import NewArgue from "../../Home/Feed/NewArgue/NewArgue";
 import Post from "../../Home/Feed/Post/Post";
 import axios from "axios";
-import "./FeedUser.css";
+import "./FeedProfile.css";
 import FlipMove from "react-flip-move";
 
 function Feed() {

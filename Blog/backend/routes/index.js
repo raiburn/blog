@@ -9,6 +9,7 @@ const deleteargue = require('./Argues/DeleteArgue');
 const argues = require('./Argues/Argues');
 const arguesUser = require('./Argues/ArguesUser');
 const ArguesFromUsers = require('./Argues/ArguesFromUsers');
+const SearchUser = require('./Users/UserSearcher');
 
 
-module.exports = [auth, createuser, users, finduser, deleteuser, alteruser, createargue, deleteargue, argues, arguesUser, ArguesFromUsers];
+module.exports = [auth, createuser, users, finduser, deleteuser, alteruser, createargue, deleteargue, argues, arguesUser, ArguesFromUsers, SearchUser];

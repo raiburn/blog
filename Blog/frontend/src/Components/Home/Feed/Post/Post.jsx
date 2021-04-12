@@ -15,11 +15,11 @@ const Post = forwardRef(
     let history = useHistory();
 
     const Comment = () =>{
-      history.push("/comentario/argue="+verified);
+      history.push("/comentario?argue="+verified);
     } 
 
     const GoUser = () =>{
-      history.push("/perfiles/user="+avatar);
+      history.push("/perfiles?user="+avatar);
     }
 
     return (

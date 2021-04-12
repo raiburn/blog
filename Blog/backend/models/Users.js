@@ -30,11 +30,6 @@ const usuarioSchema = new Schema({
     phonenumber:{
         type: String,
         unique:false
-    },
-    url:{
-        type: String,
-        unique: true,
-        trim:false
     }
 });
 

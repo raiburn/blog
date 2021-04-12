@@ -12,7 +12,7 @@ const Home = () =>{
     if(auth){
         
         return (
-                <div className="app">
+                <div class="app">
                     <Sidebar />
                     <Feed />
                     <Adds />

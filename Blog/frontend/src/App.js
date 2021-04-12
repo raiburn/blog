@@ -12,8 +12,7 @@ import Profiles from "./Components/Profiles/Profiles";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 

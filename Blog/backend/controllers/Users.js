@@ -70,4 +70,14 @@ const UsersAll = async (req, res) => {
     }
 }
 
-module.exports = {AlterUser, Login, CreateUser, DeleteUser, FindUser, UsersAll}
+const UserSearcher = async (req, res) => {
+    try {
+        const username = req.params.username;
+        const users = await Users.find({'username':{$regex:'.*' + username + '.*' }});
+        return res.status(200).json({users});
+    }catch(error){
+        console.log(error)
+    }
+}
+
+module.exports = {AlterUser, Login, CreateUser, DeleteUser, FindUser, UsersAll, UserSearcher }
