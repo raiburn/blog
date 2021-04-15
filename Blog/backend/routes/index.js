@@ -10,6 +10,9 @@ const argues = require('./Argues/Argues');
 const arguesUser = require('./Argues/ArguesUser');
 const ArguesFromUsers = require('./Argues/ArguesFromUsers');
 const SearchUser = require('./Users/UserSearcher');
+const createGroup = require('./Groups/CreateGroup');
+const groupsAll = require('./Groups/groupsAll');
+const delGroup = require('./Groups/delGroup');
 
-
-module.exports = [auth, createuser, users, finduser, deleteuser, alteruser, createargue, deleteargue, argues, arguesUser, ArguesFromUsers, SearchUser];
+//exportar las rutas para poder acceder a ellas desde el index.js
+module.exports = [auth, createuser, users, finduser, deleteuser, alteruser, createargue, deleteargue, argues, arguesUser, ArguesFromUsers, SearchUser, createGroup, groupsAll, delGroup];

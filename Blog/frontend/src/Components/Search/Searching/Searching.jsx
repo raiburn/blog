@@ -1,12 +1,12 @@
 import React from 'react';
-import isAuthenticated from "../../services/IsAuthenticated";
-import Feed from "./FeedGroups/FeedGroups";
-import Adds from "../Adds/Adds";
-import Sidebar from '../Sidebar/Sidebar';
+import isAuthenticated from "../../../services/IsAuthenticated";
+import Adds from "../../Adds/Adds";
+import Sidebar from '../../Sidebar/Sidebar';
+import Feed from './Feed/FeedSearch';
 import  { Redirect }  from "react-router-dom";
 
 
-const Groups = () =>{
+const Search = () =>{
     const auth = isAuthenticated();
     if(auth){
         
@@ -24,4 +24,4 @@ const Groups = () =>{
     }
 }
 
-export default Groups;
+export default Search;

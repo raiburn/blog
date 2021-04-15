@@ -19,11 +19,12 @@ app.use(cors());
 app.use('/api', routes);
 app.set('llave', config.llave);
 
-
+//login endpoint
 app.post('/login', async (req, res) => {
   try{
       const login = await authController.Login(req, res);
-      const body = req.body;       
+      const body = req.body;
+      //if login return trye return a token and the info from the user       
       if(login.data ===true){
           const payload = {
               id : login._id,
@@ -33,10 +34,17 @@ app.post('/login', async (req, res) => {
           const token = jwt.sign(payload, app.get('llave'), {
               expiresIn: 1440
           });
+          const info = {
+            username: body.username,
+            level: login.level
+          }
           res.json({
               mensaje: 'Autenticación correcta',
-              token: token
+              token: token,
+              info: info
           });
+
+        //if login returned false it will return an error
       }else if(login === false){
           res.json({ mensaje: "Usuario y, o contraseña incorrectos"});
       }else{
@@ -53,7 +61,6 @@ app.get('/secure', (req, res) => {
         res.status(401).send({
           error: "Es necesario el token de autenticación"
         })
-        return
     }
 
     token = token.replace('', '');

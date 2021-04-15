@@ -8,6 +8,7 @@ import Wall from "./Components/Wall/Wall";
 import Search from "./Components/Search/Search";
 import Groups from "./Components/Groups/Groups";
 import Profiles from "./Components/Profiles/Profiles";
+import Searching from "./Components/Search/Searching/Searching";
 
 import {
   BrowserRouter as Router,
@@ -32,6 +33,8 @@ function App() {
         <Route path ='/perfiles' component={Profiles}>
         </Route>
         <Route exact path ='/buscar' component={Search}>
+        </Route>
+        <Route exact ='/buscascando' component={Searching}>
         </Route>
         <Route exact path ='/grupos' component={Groups}>
         </Route>

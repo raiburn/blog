@@ -9,6 +9,7 @@ const Auth = async (userData) => {
                 password: userData.password
               })
             window.localStorage.setItem("token", data.token);
+            window.localStorage.setItem("info", data.info);
         }
         catch(error) {
           console.log(error);

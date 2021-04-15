@@ -2,16 +2,14 @@ import React, { useEffect } from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import isAuthenticated from '../services/isAuthenticated';
 import * as Linking from 'expo-linking';
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
-import Feed from '../components/Feed/Feed';
-import { AntDesign } from '@expo/vector-icons';
+import Feed from '../../components/Feed/Feed';
 
 export default function TabTwoScreen() {
 
   useEffect(() => {
     (async ()=>{
-      const auth : boolean = await isAuthenticated();
+      const auth = await isAuthenticated();
       if(!auth){
         Linking.openURL('http://localhost:19006/Login');
       }

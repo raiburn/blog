@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { SafeAreaView, TextInput, Button, StyleSheet } from 'react-native';
-import { Text, View } from '../components/Themed';
+import { Text, View } from '../../components/Themed';
 import * as Linking from 'expo-linking';
-import Auth from "../services/Login/Auth.js";
+import Auth from "../../services/Login/Auth.js";
 
 export default function TabOneScreen() {
   const [text, onChangeUser] = React.useState("username");
@@ -13,6 +13,7 @@ export default function TabOneScreen() {
   }
   
     return (
+
       <SafeAreaView>
         <TextInput style={styles.input} onChangeText={onChangeUser} value={text}/>
         <TextInput style={styles.input} onChangeText={onChangePass} value={pass}/>
