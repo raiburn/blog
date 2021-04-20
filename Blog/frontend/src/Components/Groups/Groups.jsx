@@ -1,6 +1,6 @@
 import React from 'react';
 import isAuthenticated from "../../services/IsAuthenticated";
-import Feed from "./FeedGroups/FeedGroups";
+import FeedGroups from "./FeedGroups/FeedGroups";
 import Adds from "../Adds/Adds";
 import Sidebar from '../Sidebar/Sidebar';
 import  { Redirect }  from "react-router-dom";
@@ -13,7 +13,7 @@ const Groups = () =>{
         return (
                 <div className="app">
                     <Sidebar />
-                    <Feed />
+                    <FeedGroups />
                     <Adds />
                 </div>
         )

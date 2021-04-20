@@ -2,7 +2,7 @@ import React from 'react';
 import isAuthenticated from "../../../services/IsAuthenticated";
 import Adds from "../../Adds/Adds";
 import Sidebar from '../../Sidebar/Sidebar';
-import Feed from './Feed/FeedSearch';
+import Feed from './FeedSearching/FeedSearching';
 import  { Redirect }  from "react-router-dom";
 
 

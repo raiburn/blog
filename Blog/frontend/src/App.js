@@ -9,6 +9,7 @@ import Search from "./Components/Search/Search";
 import Groups from "./Components/Groups/Groups";
 import Profiles from "./Components/Profiles/Profiles";
 import Searching from "./Components/Search/Searching/Searching";
+import Comment from "./Components/Comments/Comment";
 
 import {
   BrowserRouter as Router,
@@ -30,13 +31,15 @@ function App() {
         </Route>
         <Route path ='/perfil' component={Wall}>
         </Route>
+        <Route path ='/comentario' component={Comment}>
+        </Route>
         <Route path ='/perfiles' component={Profiles}>
         </Route>
         <Route exact path ='/buscar' component={Search}>
         </Route>
         <Route exact ='/buscascando' component={Searching}>
         </Route>
-        <Route exact path ='/grupos' component={Groups}>
+        <Route exact path ='/Grupos' component={Groups}>
         </Route>
         <Route path='*' component={NotFound}>
         </Route>

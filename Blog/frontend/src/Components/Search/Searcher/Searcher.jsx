@@ -14,7 +14,7 @@ function Searcher() {
 
   return (
     <div className="newArgue">
-      <form onSubmit={(()=>Search(searchFor))}>
+      <form>
         <div className="newArgue__input">
           <Avatar src="../../../images/pfoto.jpg"/>
           <input
@@ -26,7 +26,7 @@ function Searcher() {
         </div>
 
         <Button
-          type="submit"
+          onClick={(()=>Search(searchFor))}
           className="newArgue__argueButton"
         >
           Buscar

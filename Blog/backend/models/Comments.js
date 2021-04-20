@@ -10,10 +10,12 @@ const commentSchema = new Schema({
         trim:true
     },
     argue:{
+        required:true,
         type: Schema.ObjectId,
         ref:'Argues'
     },
     users:{
+        required:true,
         type: Schema.ObjectId,
         ref:'Users'
     }

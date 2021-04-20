@@ -21,7 +21,7 @@ function Feed() {
     fetchData();
   }, []);
 
-  console.log(data[0]);
+  console.log(data);
 
   return (
     <div className="feedcontainer">

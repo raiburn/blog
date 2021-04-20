@@ -30,8 +30,6 @@ function Feed() {
     fetchData();
   }, []);
 
-  setTimeout(1500);
-
   return (
     <div className="feedcontainer">
       <div className="feed">

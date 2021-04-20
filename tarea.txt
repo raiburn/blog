@@ -1,14 +1,13 @@
 pantallas minimas{
-    login
-    regitrarse te envia a la página web
-    home
-    -vista nueva discución (se abre con boton)
-    comments 
-    -vista para nuevo comentario
-    vista perfil usuario
+    /login
+    /regitrarse te envia a la página web
+    /home
+    /vista nueva discución (se abre con boton)
+    /comments 
+    /vista para nuevo comentario
+    /vista perfil usuario
     lista de grupos
     dashboard grupo
     lista de miembros
     busqueda
 }
-

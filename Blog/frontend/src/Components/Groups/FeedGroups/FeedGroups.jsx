@@ -4,7 +4,7 @@ import axios from "axios";
 import "./FeedGroups.css";
 import FlipMove from "react-flip-move";
 
-function Feed() {
+function FeedGroups() {
   const [data, setData] = useState([]);
   
   //get the groups data from the endpoint in the db
@@ -47,4 +47,4 @@ function Feed() {
   );
 }
 
-export default Feed;
+export default FeedGroups;

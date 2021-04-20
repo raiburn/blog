@@ -38,7 +38,7 @@ async function f1() {
         <SidebarOption Icon={SearchIcon} text="Buscar" />
         <SidebarOption Icon={GroupIcon} text="Grupos" />
         <SidebarOption Icon={PermIdentityIcon} text="Perfil" />
-        <SidebarOption Icon={MoreHorizIcon} text="Más" />
+        <SidebarOption Icon={MoreHorizIcon} text="Mas" />
 
         <Button variant="outlined" className="sidebar__Log-out" fullWidth onClick={logout}>
           Log out
