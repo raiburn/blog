@@ -76,7 +76,7 @@ const UserSearcher = async (req, res) => {
         const users = await Users.find({'username':{$regex:'.*' + username + '.*' }});
         return res.status(200).json({users});
     }catch(error){
-        console.log(error)
+        console.log(error);
     }
 }
 

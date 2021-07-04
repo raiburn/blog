@@ -65,7 +65,7 @@ app.get('/secure', (req, res) => {
 
     token = token.replace('', '');
 
-    jwt.verify(token, "kimochi69*", function(err, user) {
+    jwt.verify(token, config.llave, function(err, user) {
       if (err) {
         res.status(401).send({
           error: 'Token inválido'

@@ -31,15 +31,15 @@ function App() {
         </Route>
         <Route path ='/perfil' component={Wall}>
         </Route>
+        <Route exact path ='/Grupos' component={Groups}>
+        </Route>
         <Route path ='/comentario' component={Comment}>
         </Route>
         <Route path ='/perfiles' component={Profiles}>
         </Route>
         <Route exact path ='/buscar' component={Search}>
         </Route>
-        <Route exact ='/buscascando' component={Searching}>
-        </Route>
-        <Route exact path ='/Grupos' component={Groups}>
+        <Route path ='/buscando' component={Searching}>
         </Route>
         <Route path='*' component={NotFound}>
         </Route>

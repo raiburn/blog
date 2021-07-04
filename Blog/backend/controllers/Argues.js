@@ -5,7 +5,6 @@ const CreateArgue = async (req, res) => {
     try{
       const body = req.body;
       const user = (jwt.decode(body.user));
-      console.log(body);
       const argue = await Argues.create({ message: body.message, created_at: body.created_at, users: user.id});
       return res.status(200).json({argue});
     } catch(error){
@@ -43,16 +42,6 @@ const ArguesUser = async (req, res) => {
 }
 
 //search for argues from a user with a username
-const ArguesFromUsers = async (req, res) => {
-    try {
-        const user = req.params.username;
-        console.log(user);
-        const argues = await Argues.find({}).populate('users').where('users').equals(user).sort({created_at:'desc'}).exec();
-        return res.status(200).json({argues});
-    }catch (error){
-        console.log(error);
-    }
-}
 
 //search for an argue with its own id
 const FindArgue = async (req, res) => {
@@ -65,4 +54,4 @@ const FindArgue = async (req, res) => {
     }
 }
 
-module.exports = {CreateArgue, ArguesAll, DeleteArgue, ArguesUser, ArguesFromUsers, FindArgue}
+module.exports = {CreateArgue, ArguesAll, DeleteArgue, ArguesUser, FindArgue}

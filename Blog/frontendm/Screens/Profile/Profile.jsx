@@ -10,7 +10,6 @@ import Footer from '../../components/Footer/Footer';
 export default function Profile( { route, navigation }) {
     const {user} = route.params;
     const username = user;
-    console.log(username);
 
   useEffect(() => {
     (async ()=>{

@@ -17,7 +17,6 @@ const CreateGroup = async (req, res) => {
 const GroupsAll = async (req, res) => {
     try {
         const groups = await Groups.find({}).sort({created_at:'desc'}).exec();
-        console.log(groups);
         res.status(200).json({groups});
     } catch (error) {
         console.log(error);

@@ -16,19 +16,32 @@ function Feed() {
   const [data, setData] = useState([]);
   const user = query.get("user");
 
-  useEffect( () => {
-    const fetchData = async () => {
-      try{
-        const result = await axios.get(`${window.location.protocol}//${window.location.hostname}:8000/api/argues/`+user);
-        setData(result.data.argues);
-        uname = result.data.argues[0].users.username;
-      }
-      catch(error) {
-        console.log(error);
-      }
-    }
-    fetchData();
-  }, []);
+  // useEffect( () => {
+  //   const fetchData = async () => {
+  //     try{
+  //       const result = await axios.get(`${window.location.protocol}//${window.location.hostname}:8000/api/argues/`+user);
+  //       setData(result.data.argues);
+  //       uname = result.data.argues[0].users.username;
+  //     }
+  //     catch(error) {
+  //       console.log(error);
+  //     }
+  //   }
+  //   fetchData();
+  // }, []);
+
+  useEffect(() => {
+    (async () => {
+        try {
+            const { data: { argues } } = await axios.get(`${window.location.protocol}//${window.location.hostname}:8000/api/argues/` + user);
+            setData(() => argues);
+            uname = argues[0].users.username;
+        }
+        catch (error) {
+            console.log(error);
+        }
+    })()
+}, []);
 
   return (
     <div className="feedcontainer">

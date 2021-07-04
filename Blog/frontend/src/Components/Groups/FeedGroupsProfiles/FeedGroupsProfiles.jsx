@@ -3,15 +3,22 @@ import Post from "../../Home/Feed/Post/Post";
 import NewGroup from "../NewGroup/NewGroup";
 import axios from "axios";
 import FlipMove from "react-flip-move";
+import { useLocation } from "react-router-dom";
 
 function FeedGroups() {
   const [data, setData] = useState([]);
+  const query = useQuery();
+  const group = query.get("group");
+
+  function useQuery () {
+    return new URLSearchParams(useLocation().search);
+  }
   
   //get the groups data from the endpoint in the db
   useEffect(() => {
     (async () => {
         try {
-            const { data: { groups } } = await axios.get(`${window.location.protocol}//${window.location.hostname}:8000/api/groups/`);
+            const { data: { groups } } = await axios.get(`${window.location.protocol}//${window.location.hostname}:8000/api/groups/`+group);
             setData(() => groups);
         }
         catch (error) {
@@ -24,7 +31,7 @@ function FeedGroups() {
     <div className="feedcontainer">
       <div className="feed">
         <div className="feed__header">
-          <h2> Grupos</h2>
+          <h2> Grupos Profiles</h2>
         </div>
         <NewGroup />
         <FlipMove>

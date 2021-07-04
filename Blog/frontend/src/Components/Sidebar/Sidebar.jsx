@@ -21,7 +21,7 @@ const Sidebar = () => {
   }
 
 async function f1() {
-    var x = await resolveAfter2Seconds(15);
+    await resolveAfter2Seconds(15);
   }
 
   const logout = () => {
